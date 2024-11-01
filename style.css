@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+
+
+ /* Background Animation */
+ body::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none; /* Prevent interaction with background animation */
+    animation: animateBackground 10s linear infinite;
+}
+
+@keyframes animateBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+
+
+
+
+.terminal{
+    /* position: absolute;
+    height: 400px;
+    width: 400px;
+    background-color: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; */
+
+    /* position: relative; */
+    height: 400px;
+    width: 400px;
+    background-color: #222;
+    color: #00FF00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    overflow: hidden;
+    border:1px solid #00FF00;
+    
+}
+
+i{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size:xxx-large;
+    color: red;
+}
+
+.step1, .step2, .step3, .step3, .step4, .step5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00FF00;
+    width: 100%;
+    height: 6%;
+    margin-bottom: 10px;
+}
